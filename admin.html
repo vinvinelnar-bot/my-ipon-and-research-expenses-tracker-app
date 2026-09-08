@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Ipon Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-page">
+  <header class="topbar">
+    <a class="logo" href="dashboard.html"><span>₱</span> Ipon Challenge</a>
+    <div class="topbar-actions">
+      <span class="user-email">ADMIN</span>
+      <button id="logoutBtn" class="btn danger small-btn">LOG OUT</button>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="welcome-row">
+      <div>
+        <p class="eyebrow">ADMIN PANEL</p>
+        <h1>Mga Gumamit ng Website 👥</h1>
+        <p class="muted">Makikita rito ang mga registered users at kung kailan sila huling nag-login.</p>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card featured">
+        <p>Total Users</p>
+        <h2 id="userCount">0</h2>
+        <span>Registered accounts</span>
+      </article>
+      <article class="stat-card">
+        <p>Total Savings</p>
+        <h2 id="allSavings">₱0.00</h2>
+        <span>Combined savings</span>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">USER LIST</p>
+          <h2>Registered Users</h2>
+        </div>
+        <button id="refreshBtn" class="btn secondary small-btn">REFRESH</button>
+      </div>
+      <p id="adminMessage" class="form-message"></p>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Total Ipon</th>
+              <th>Goal</th>
+              <th>Last Login</th>
+              <th>Registered</th>
+            </tr>
+          </thead>
+          <tbody id="usersTableBody">
+            <tr><td colspan="6" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <a href="dashboard.html" class="btn secondary">← BACK TO DASHBOARD</a>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
