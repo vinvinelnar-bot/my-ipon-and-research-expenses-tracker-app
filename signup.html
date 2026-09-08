@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Ipon Challenge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="back-link" href="index.html">← Home</a>
+    <div class="brand-badge small">₱</div>
+    <h1>Create account</h1>
+    <p class="muted">Simulan ang sarili mong Ipon Challenge.</p>
+
+    <form id="signupForm" class="form-stack">
+      <label>Pangalan/Username/Group Name. pumili ng isa
+        <input id="name" type="text" placeholder="Juan Dela Cruz" maxlength="60" required />
+      </label>
+      <label>Email
+        <input id="email" type="email" placeholder="name@email.com" required />
+      </label>
+      <label>Password
+        <input id="password" type="password" placeholder="At least 6 characters" minlength="6" required />
+      </label>
+
+      <div class="account-type-box">
+        <p class="field-title">ACCOUNT TYPE</p>
+        <div class="account-choice-grid">
+          <label class="account-choice">
+            <input type="radio" name="accountType" value="personal" required />
+            <span><b>👤 Personal</b><small>Para sa sariling ipon at savings goals.</small></span>
+          </label>
+          <label class="account-choice">
+            <input type="radio" name="accountType" value="research" />
+            <span><b>🔬 For Research</b><small>May research project at expense tracking.</small></span>
+          </label>
+        </div>
+      </div>
+
+      <button class="btn primary full" type="submit">CREATE ACCOUNT</button>
+      <p id="message" class="form-message"></p>
+    </form>
+    <p class="auth-switch">May account ka na? <a href="login.html">Login</a></p>
+  </main>
+  <script type="module" src="signup.js"></script>
+</body>
+</html>
